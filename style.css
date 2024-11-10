@@ -1,0 +1,523 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url(./font/Merriweather/Merriweather-Regular.eot), url(./font/Merriweather/Merriweather-Regular.otf), url(./font/Merriweather/Merriweather-Regular.ttf), url(./font/Merriweather/Merriweather-Regular.woff), url(./font/Merriweather/Merriweather-Regular.woff2);
+}
+@font-face {
+  font-family: "Golos Text";
+  src: url(./font/golos/GolosText-VariableFont_wght.eot), url(./font/golos/GolosText-VariableFont_wght.otf), url(./font/golos/GolosText-VariableFont_wght.ttf), url(./font/golos/GolosText-VariableFont_wght.woff), url(./font/golos/GolosText-VariableFont_wght.woff2);
+}
+.container {
+  max-width: 1366px;
+  width: 100%;
+  padding: 0 72px;
+  margin: 0 auto;
+}
+
+.button {
+  display: flex;
+  width: 263px;
+  height: 72px;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 66px;
+  border: 2px solid #1F1F1F;
+  background: #1F1F1F;
+  color: #FFF;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  transition: 0.5s;
+}
+.button:hover {
+  background: #FBCE51;
+  border: 2px solid #FBCE51;
+  color: #1F1F1F;
+}
+
+.header {
+  background-image: url(./img/header-img.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-all {
+  padding: 26px 0 132px 0;
+}
+.header__logo {
+  margin-bottom: 62px;
+  display: flex;
+  height: 36px;
+  gap: 6px;
+}
+.header__logo h1 {
+  color: #595653;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text", sans-serif;
+  font-size: 16.651px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 108%;
+  text-transform: uppercase;
+}
+.header__h2_text-1 {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Merriweather";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.header__h2_text-2 {
+  color: #313131;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Merriweather";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.header__h2_text-3 {
+  color: #313131;
+  text-align: right;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Merriweather";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.header__info {
+  display: flex;
+  max-width: 542px;
+  width: 100%;
+  gap: 24px;
+  flex-direction: column;
+}
+.header__info_buttons {
+  display: flex;
+  gap: 16px;
+}
+.header__info_button-2 {
+  background-color: transparent;
+  color: #1f1f1f;
+}
+.header__info_button-2:hover {
+  border-radius: 66px;
+  border: 2px solid #1F1F1F;
+  background: #1F1F1F;
+  color: #FFF;
+}
+.header__info_text {
+  color: #313131;
+  text-align: center;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+@media screen and (max-width: 850px) {
+  .header__info {
+    max-width: 400px;
+  }
+  .header__h2_text-1 {
+    font-size: 40px;
+  }
+  .header__h2_text-2 {
+    font-size: 40px;
+  }
+  .header__h2_text-3 {
+    font-size: 40px;
+    padding-right: 25px;
+  }
+  .button {
+    height: 60px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .header {
+    background-position: center;
+  }
+  .header-container {
+    padding: 0 35px;
+  }
+  .header__info_button-2 {
+    opacity: 0.9;
+    background: #FFF;
+    border: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .header__logo {
+    margin-bottom: 40px;
+  }
+  .header h1 {
+    font-size: 14px;
+  }
+  .header__h2_text-1 {
+    font-size: 36px;
+  }
+  .header__h2_text-2 {
+    font-size: 36px;
+  }
+  .header__h2_text-3 {
+    font-size: 36px;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 465px) {
+  .header-all {
+    padding: 18px 0 291px 0;
+  }
+  .header__info_buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .header__info_text {
+    margin-bottom: 8px;
+  }
+  .header__info .button {
+    width: 335px;
+  }
+  .header-container {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header {
+    background-image: url(./img/background-375px.webp);
+  }
+}
+.marquee {
+  background: #F54932;
+  color: #fff;
+  display: flex;
+}
+.marquee__text {
+  color: #FFF;
+  text-align: right;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Merriweather", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.marquee__elipse {
+  display: inline;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  color: #FFF;
+}
+.marquee__div {
+  display: flex;
+  padding: 18px 12px;
+  align-items: center;
+  gap: 12px;
+}
+
+@media screen and (max-width: 375px) {
+  .marquee__text {
+    font-size: 16px;
+  }
+  .marquee__div {
+    padding: 10px 12px;
+  }
+}
+.main {
+  padding: 80px 0;
+}
+.main-container {
+  padding: 0 45px;
+}
+.main-all {
+  display: flex;
+  flex-direction: column;
+}
+.main__title {
+  display: flex;
+  gap: 64px;
+  margin-bottom: 17px;
+  margin: 0 auto;
+}
+.main__title_h2 {
+  max-width: 764px;
+  width: 100%;
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Merriweather";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  text-transform: uppercase;
+  margin: 27px 0;
+}
+.main__title_h2-span {
+  color: #F54932;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Merriweather";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+  text-transform: uppercase;
+}
+.main__title_img {
+  width: 394px;
+  height: 250px;
+}
+.main__title-mobile_h2 {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Merriweather";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  text-transform: uppercase;
+  display: none;
+}
+.main__mobile_text {
+  display: none;
+}
+.main__mobile_img {
+  display: none;
+}
+
+.session {
+  display: flex;
+  gap: 17px;
+}
+.session__img {
+  width: 528px;
+  height: 609px;
+}
+.session__info {
+  padding: 47px 0 35px 0;
+  max-width: 704px;
+  width: 100%;
+}
+.session__info_text {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Merriweather";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+.session__info_text-span {
+  color: #F54932;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Merriweather";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 135%;
+  text-transform: uppercase;
+}
+.session__info_text-1190px {
+  display: none;
+}
+.session__info_questions {
+  color: #3057A2;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-decoration: none;
+}
+
+.table {
+  max-width: 704px;
+  width: 100%;
+  margin-bottom: 48px;
+  border-collapse: collapse;
+  border: none;
+}
+.table__span {
+  text-decoration-line: line-through;
+  text-decoration-color: #F54932;
+  margin-right: 12px;
+}
+
+.q {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  padding: 16px 16px 16px 0;
+  border: 2px solid #D0D0D0;
+  border-left: none;
+  width: 43%;
+}
+.q-t {
+  padding: 0 16px 16px 0;
+  border-top: none;
+  border-left: none;
+}
+.q-b {
+  padding: 16px 16px 0 0;
+  border-bottom: none;
+  border-left: none;
+}
+
+.a {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  padding: 16px 0 16px 16px;
+  border: 2px solid #D0D0D0;
+  border-right: none;
+}
+.a-t {
+  padding: 0 0 16px 16px;
+  border-top: none;
+}
+.a-b {
+  padding: 16px 0 0 16px;
+  border-bottom: none;
+}
+
+@media screen and (max-width: 1190px) {
+  .session__info_text {
+    display: none;
+  }
+  .main__title {
+    margin-bottom: 30px;
+    gap: 32px;
+  }
+  .main__title_img {
+    margin-top: 50px;
+  }
+  .main__mobile_text {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .main__mobile {
+    display: flex;
+  }
+  .main__mobile_img {
+    display: block;
+    width: 50%;
+  }
+  .main__mobile_text {
+    margin-top: 100px;
+  }
+  .main__title_h2 {
+    font-size: 30px;
+  }
+  .main__title_h2-span {
+    font-size: 30px;
+  }
+  .session {
+    margin: 0 auto;
+  }
+  .session__img {
+    display: none;
+  }
+  .session__info_text {
+    font-size: 30px;
+  }
+  .session__info_text-span {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .main__title_img {
+    display: none;
+  }
+  .main__title_h2 {
+    text-align: center;
+  }
+  .main__mobile_text {
+    margin-top: 50px;
+  }
+  .session__info_questions {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main__mobile_img {
+    display: none;
+  }
+  .main__mobile_text {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .main {
+    padding: 48px 0 60px 0;
+  }
+  .main-container {
+    padding: 0 20px;
+  }
+  .main__title {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .main__title_img {
+    display: block;
+    margin-top: 0;
+    width: 336px;
+    margin: 0 auto;
+  }
+  .main__title_h2 {
+    font-size: 28px;
+    margin: 0;
+    text-align: start;
+  }
+  .main__title_h2-mobile {
+    display: none;
+  }
+  .main__title-mobile_h2 {
+    display: block;
+    text-align: center;
+    text-align: start;
+  }
+  .main__mobile {
+    flex-direction: column;
+  }
+  .main__mobile_img {
+    display: block;
+    width: 100%;
+  }
+  .main__mobile_text {
+    text-align: start;
+  }
+}/*# sourceMappingURL=style.css.map */

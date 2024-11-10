@@ -1,0 +1,197 @@
+.header{
+    background-image: url(./img/header-img.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-all{
+        padding: 26px 0 132px 0;
+    }
+
+    &__logo{
+        margin-bottom: 62px;
+        display: flex;
+        height: 36px;
+        gap: 6px;
+
+        h1{
+            color: #595653;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Golos Text", sans-serif;
+            font-size: 16.651px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 108%;
+            text-transform: uppercase;
+        }
+    }
+
+    &__h2{
+        &_text-1{
+            color: #313131;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Merriweather";
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%;
+            text-transform: uppercase;
+        }
+
+        &_text-2{
+            color: #313131;
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Merriweather";
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%;
+            text-transform: uppercase;
+        }
+
+        &_text-3{
+            color: #313131;
+            text-align: right;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Merriweather";
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%;
+            text-transform: uppercase;
+        }
+    }
+    &__info{
+        display: flex;
+        max-width: 542px;
+        width: 100%;
+        gap: 24px;
+        flex-direction: column;
+        
+
+        &_buttons{
+            display: flex;
+            gap: 16px;
+        }
+        &_button-2{
+            background-color: transparent;
+            color: #1f1f1f;
+            &:hover{
+                border-radius: 66px;
+                border: 2px solid #1F1F1F;
+                background: #1F1F1F;
+                color: #FFF;
+            }
+        }
+
+        &_text{
+            color: #313131;
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Golos Text";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%; 
+        }
+    }
+}
+
+@media screen and (max-width:850px){
+    .header{
+        &__info{
+            max-width: 400px;
+        }
+
+        &__h2{
+            &_text-1{
+                font-size: 40px;
+            }
+            &_text-2{
+                font-size: 40px;
+            }
+            &_text-3{
+                font-size: 40px;
+                padding-right: 25px;
+            }
+        }
+    }
+    .button{
+        height: 60px;
+    }
+}
+
+@media screen and (max-width:700px){
+    .header{
+        background-position: center;
+
+        &-container{
+            padding: 0 35px;
+        }
+
+        &__info{
+            &_button-2{
+                opacity: 0.9;
+                background: #FFF;
+                border: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:550px){
+    .header{
+        &__logo{
+            margin-bottom: 40px;
+        }
+
+        h1{
+            font-size: 14px;
+        }
+
+        &__h2{
+            &_text{
+                &-1{
+                    font-size: 36px;
+                }
+                &-2{
+                    font-size: 36px;
+                }
+                &-3{
+                    font-size: 36px;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:465px){
+    .header{
+        &-all{
+            padding: 18px 0 291px 0;
+        }
+        &__info{
+            &_buttons{
+                flex-direction: column;
+                align-items: center;
+                gap: 14px;
+            }
+            &_text{
+                margin-bottom: 8px;
+            }
+            .button{
+                width: 335px;
+            }
+        }
+        &-container{
+            padding: 0 20px;
+        }
+    }
+}
+
+@media screen and (max-width:375px){
+    .header{
+        background-image: url(./img/background-375px.webp);
+    }
+}
