@@ -1,0 +1,46 @@
+.stages{
+    padding: 85px 0 100px 0;
+    &-all{
+
+    }
+    &__title{
+        display: flex;
+        flex-direction: column;
+        &_h2{
+            color: #313131;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Merriweather";
+            font-size: 54px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            text-transform: uppercase;
+        }
+
+        &_text{
+            display: flex;
+
+            &1{
+                color: #313131;
+                font-variant-numeric: lining-nums proportional-nums;
+                font-family: "Merriweather";
+                font-size: 54px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                text-transform: uppercase;
+            }
+
+            &2{
+                color: #3057A2;
+                font-variant-numeric: lining-nums proportional-nums;
+                font-family: "Golos Text";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                margin: 5px 0 0 20px;
+            }
+        }
+    }
+}

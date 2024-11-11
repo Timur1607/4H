@@ -116,6 +116,17 @@
             text-decoration: none;
         }
     }
+
+    &__mobile-table{
+        margin: 44px 0 40px 0;
+        display: none;
+        &_hr{
+        width: 100%;
+        height: 2px;
+        color: #D0D0D0;
+        margin: 16px 0;
+        }
+    }
 }
 .table{
     max-width: 704px;
@@ -175,6 +186,34 @@
         padding: 16px 0 0 16px;
         border-bottom: none;
     }
+}
+
+.mobile{
+    &-q{
+        color: #313131;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-family: "Golos Text";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin-bottom: 12px;
+
+        &1{
+            margin: 0;
+        }
+    }
+
+    &-a{
+        color: #313131;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-family: "Golos Text";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; 
+    }
+    
 }
 
 @media screen and (max-width:1190px){
@@ -295,7 +334,7 @@
             &_img{
                 display: block;
                 margin-top: 0;
-                width: 336px;
+                width: 100%;
                 margin: 0 auto;
             }
 
@@ -305,6 +344,10 @@
                 text-align: start;
                 &-mobile{
                     display: none;
+                }
+
+                &-span{
+                    font-size: 28px;
                 }
             }
             &-mobile_h2{
@@ -322,7 +365,33 @@
             }
             &_text{
                 text-align: start;
+                margin-bottom: 0;
+                font-size: 28px;
             }
         }
+    }
+
+    .session{
+        &__info{
+            padding: 0;
+
+            &_questions{
+                font-size: 18px;
+            }
+
+            &_text{
+                &-span{
+                    font-size: 28px;
+                }
+            }
+        }
+
+        &__mobile-table{
+            display: block;
+        }
+    }
+
+    .table{
+        display: none;
     }
 }

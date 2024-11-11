@@ -1,0 +1,275 @@
+.players{
+    padding: 100px 0 140px 0;
+    &-all{
+
+    }
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        align-items: center;
+        &_h2{
+            color: #313131;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Merriweather";
+            font-size: 54px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            text-transform: uppercase;
+        }
+
+        &_buttons{
+            width: 151px;
+            height: 44px;  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+        }
+    }
+
+    &-button{
+        &__left{
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: none;
+            circle{
+                transition: 0.5s;
+            }
+
+            &:hover{
+                circle{
+                    fill: #FBCE51;
+                }
+            }
+            &:disabled{
+                circle{
+                    fill: #D6D6D6;
+                }
+            }
+            
+        }
+
+        &__info{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1px;
+            &_text{
+                &1{
+                    color: #313131;
+                    leading-trim: both;
+                    text-edge: cap;
+                    font-variant-numeric: lining-nums proportional-nums;
+                    font-family: "Golos Text";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
+                &2{
+                    color: #313131;
+                    leading-trim: both;
+                    text-edge: cap;
+                    font-variant-numeric: lining-nums proportional-nums;
+                    font-family: "Golos Text";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
+                &3{
+                    color: #313131;
+                    leading-trim: both;
+                    text-edge: cap;
+                    font-variant-numeric: lining-nums proportional-nums;
+                    font-family: "Golos Text";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
+            }
+        }
+
+        &__right{
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: none;
+            circle{
+                transition: 0.5s;
+            }
+
+            &:hover{
+                circle{
+                    fill: #FBCE51;
+                }
+            }
+            &:disabled{
+                circle{
+                    fill: #D6D6D6;
+                }
+            }
+        }
+
+       
+    }
+
+    &-articles{
+        display: flex;
+        gap: 20px;
+        overflow: scroll;
+        padding: 0 72px;
+        &::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+    }
+
+    &-article{
+        width: 394px;
+        // height: 462px;
+        padding: 0 37px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &__img{
+        margin-bottom: 28px;
+        }
+        &__name{
+            margin-bottom: 6px;
+            color: #313131;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Golos Text";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+        }
+        &__status{
+            margin-bottom: 20px;
+            color: #313131;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Golos Text";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+        &__button{
+            display: flex;
+            padding: 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: #3057A2;
+            leading-trim: both;
+            text-edge: cap;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Golos Text";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            border-radius: 62px;
+            border: 1px solid #3057A2;
+            height: 35px;
+            background-color: transparent;
+            transition: 0.5s;
+
+            &:hover{
+                border: 1px solid #3057A2;
+                background: #3057A2;
+                color: #fff;
+            }
+        }
+    }
+
+    &-buttons__mobile{
+        display: none;
+
+    }
+}
+
+@media screen and (max-width:1000px){
+    .players{
+        padding: 80px 0 700px 0;
+
+        &__title{
+            &_h2{
+                font-size: 40px;
+            }
+        }
+    }
+}
+@media screen and (max-width:700px){
+    .players{
+        padding: 30px 0 40px 0;
+        &-container{
+            padding: 0 45px;
+        }
+
+        &-articles{
+            padding: 0 45px;
+        }
+    }
+}
+
+@media screen and (max-width:520px){
+    .players{
+        &-container{
+            padding: 0 20px;
+        }
+        &__title{
+            &_buttons{
+                display: none;
+            }
+        }
+
+        &-button{
+            &__left{
+                width: 36px;
+                height: 36px;
+                circle{
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+            &__right{
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        &-buttons__mobile{
+            display: flex;
+            width: 129px;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        &-articles{
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        &-article{
+            padding: 0 24px;
+            width: 335px;
+            flex: 335px 0 0;
+            &__img{
+                width: 244px;
+            }
+            &__name{
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+            &__status{
+                font-size: 20px;
+            }
+        }
+    }
+}
