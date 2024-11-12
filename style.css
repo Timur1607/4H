@@ -151,12 +151,14 @@
     height: 60px;
   }
 }
+@media screen and (max-width: 750px) {
+  .header-container {
+    padding: 0 40px;
+  }
+}
 @media screen and (max-width: 700px) {
   .header {
     background-position: center;
-  }
-  .header-container {
-    padding: 0 35px;
   }
   .header__info_button-2 {
     opacity: 0.9;
@@ -194,7 +196,10 @@
   .header__info_text {
     margin-bottom: 8px;
   }
-  .header__info .button {
+  .header__info_button-1 {
+    width: 335px;
+  }
+  .header__info_button-2 {
     width: 335px;
   }
   .header-container {
@@ -204,6 +209,26 @@
 @media screen and (max-width: 375px) {
   .header {
     background-image: url(./img/background-375px.webp);
+  }
+  .header__info_button-1 {
+    width: 100%;
+  }
+  .header__info_button-2 {
+    width: 100%;
+  }
+  .header__h2_text-1 {
+    font-size: 30px;
+  }
+  .header__h2_text-2 {
+    font-size: 30px;
+  }
+  .header__h2_text-3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .header-container {
+    padding: 0 20px;
   }
 }
 .marquee {
@@ -246,9 +271,6 @@
 }
 .main {
   padding: 80px 0;
-}
-.main-container {
-  padding: 0 45px;
 }
 .main-all {
   display: flex;
@@ -303,6 +325,9 @@
 }
 .main__mobile_img {
   display: none;
+}
+.main-container {
+  padding: 0 72px;
 }
 
 .session {
@@ -505,12 +530,22 @@
     text-align: center;
   }
 }
+@media screen and (max-width: 750px) {
+  .main-container {
+    padding: 0 40px;
+  }
+}
 @media screen and (max-width: 700px) {
   .main__mobile_img {
     display: none;
   }
   .main__mobile_text {
     margin-top: 0;
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-container {
+    padding: 0 20px;
   }
 }
 @media screen and (max-width: 425px) {
@@ -529,6 +564,7 @@
     margin-top: 0;
     width: 100%;
     margin: 0 auto;
+    height: auto;
   }
   .main__title_h2 {
     font-size: 28px;
@@ -574,12 +610,33 @@
     display: none;
   }
 }
+@media screen and (max-width: 360px) {
+  .main__title_img {
+    display: none;
+  }
+  .main__title_h2 {
+    font-size: 22px;
+  }
+  .main__title_h2-span {
+    font-size: 22px;
+  }
+  .main__title-mobile_h2 {
+    font-size: 22px;
+  }
+  .session__info_text {
+    font-size: 22px;
+  }
+  .session__info_text-span {
+    font-size: 22px;
+  }
+}
 .stages {
   padding: 85px 0 100px 0;
 }
 .stages__title {
   display: flex;
   flex-direction: column;
+  margin-bottom: 54px;
 }
 .stages__title_h2 {
   color: #313131;
@@ -614,7 +671,237 @@
   line-height: 120%;
   margin: 5px 0 0 20px;
 }
+.stages__title_mobile {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+.stages__title_mobile-h2 {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Merriweather";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.stages__title_mobile-text {
+  color: #3057A2;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.stages-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+}
+.stages-articles__mobile {
+  gap: 20px;
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+  padding: 0 72px;
+}
+.stages-articles__mobile_1a2 {
+  padding: 62px 20px 34px 20px;
+  background-color: #E9DED4;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  height: 300px;
+}
+.stages-articles__mobile_4a5 {
+  padding: 62px 20px 34px 20px;
+  background-color: #E9DED4;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  height: 300px;
+}
+.stages-article {
+  display: flex;
+  padding: 20px;
+  opacity: 0.8;
+  background-color: #E9DED4;
+  gap: 16px;
+}
+.stages-article__div {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fff;
+  flex: 36px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stages-article__div_number {
+  color: #313131;
+  leading-trim: both;
+  text-edge: cap;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+.stages-article__text {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  max-width: 403px;
+  width: 100%;
+}
+.stages-article__img {
+  position: absolute;
+  bottom: 21px;
+  right: -70px;
+}
+.stages-article:nth-child(3) {
+  grid-column: 3/3;
+  grid-row: 1/3;
+}
+.stages-article:nth-child(7) {
+  grid-column: 2/4;
+  grid-row: 3/3;
+  position: relative;
+}
+.stages-article__mobile {
+  display: flex;
+  gap: 16px;
+}
+.stages-article__mobile_text {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+.stages-article__mobile_3 {
+  height: 300px;
+  padding: 62px 20px 34px 20px;
+  background-color: #E9DED4;
+  display: flex;
+  gap: 16px;
+}
+.stages-article__mobile_4 {
+  background-color: #E9DED4;
+  display: flex;
+  gap: 16px;
+}
+.stages-article__mobile_5 {
+  background-color: #E9DED4;
+  display: flex;
+  gap: 16px;
+}
+.stages-article__mobile_6 {
+  height: 300px;
+  padding: 62px 20px 34px 20px;
+  background-color: #E9DED4;
+  display: flex;
+  gap: 16px;
+}
+.stages-article__mobile_7 {
+  height: 300px;
+  padding: 62px 20px 34px 20px;
+  background-color: #E9DED4;
+  display: flex;
+  gap: 16px;
+}
 
+@media screen and (max-width: 1323px) {
+  .stages-article:nth-child(7) .stages-article__text {
+    max-width: 250px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .stages-articles {
+    display: none;
+  }
+  .stages-articles__mobile {
+    display: grid;
+  }
+  .stages-article__img {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .stages__title {
+    display: none;
+  }
+  .stages__title_mobile {
+    display: flex;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 833px) {
+  .stages-articles__mobile {
+    display: flex;
+    overflow: scroll;
+    flex: 335 0 0;
+  }
+  .stages-articles__mobile_1a2 {
+    width: 335px;
+    height: 300px;
+    flex: 0 0 335px;
+  }
+  .stages-articles__mobile_4a5 {
+    width: 335px;
+    height: 300px;
+    flex: 0 0 335px;
+  }
+  .stages-articles__mobile::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .stages-articles__mobile:nth-child(5) {
+    grid-column: 1/1;
+    grid-row: 1/3;
+  }
+  .stages-article__mobile_3 {
+    width: 335px;
+    height: 300px;
+    flex: 0 0 335px;
+  }
+  .stages-article__mobile_6 {
+    width: 335px;
+    height: 300px;
+    flex: 0 0 335px;
+  }
+  .stages-article__mobile_7 {
+    width: 335px;
+    height: 300px;
+    flex: 0 0 335px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .stages-container {
+    padding: 0 40px;
+  }
+  .stages-articles__mobile {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .stages-container {
+    padding: 0 20px;
+  }
+  .stages-articles__mobile {
+    padding: 0 20px;
+  }
+}
 .players {
   padding: 100px 0 140px 0;
 }
@@ -684,6 +971,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  opacity: 0.6;
 }
 .players-button__info_text3 {
   color: #313131;
@@ -695,6 +983,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  opacity: 0.6;
 }
 .players-button__right {
   width: 44px;
@@ -783,10 +1072,18 @@
 
 @media screen and (max-width: 1000px) {
   .players {
-    padding: 80px 0 700px 0;
+    padding: 80px 0 70px 0;
   }
   .players__title_h2 {
     font-size: 40px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .players-container {
+    padding: 0 40px;
+  }
+  .players-articles {
+    padding: 0 40px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -843,5 +1140,38 @@
   }
   .players-article__status {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .players__title_h2 {
+    font-size: 30px;
+  }
+}
+.footer {
+  padding: 40px 0 72px 0;
+  background: #E9DED4;
+}
+.footer__info {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 750px) {
+  .footer-container {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .footer {
+    padding: 40px 0 60px 0;
+  }
+  .footer-container {
+    padding: 0 20px;
   }
 }/*# sourceMappingURL=style.css.map */

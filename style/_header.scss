@@ -121,13 +121,19 @@
     }
 }
 
+@media screen and (max-width:750px){
+    .header-container{
+        padding: 0 40px;
+    }
+}
+
 @media screen and (max-width:700px){
     .header{
         background-position: center;
 
-        &-container{
-            padding: 0 35px;
-        }
+        // &-container{
+        //     padding: 0 35px;
+        // }
 
         &__info{
             &_button-2{
@@ -180,8 +186,14 @@
             &_text{
                 margin-bottom: 8px;
             }
-            .button{
-                width: 335px;
+            &_button{
+                &-1{
+                    width: 335px;
+                }
+                &-2{
+                    width: 335px;
+                }
+                
             }
         }
         &-container{
@@ -193,5 +205,35 @@
 @media screen and (max-width:375px){
     .header{
         background-image: url(./img/background-375px.webp);
+        &__info{
+            &_button{
+                &-1{
+                    width: 100%;
+                }
+                &-2{
+                    width: 100%;
+                }
+            }
+        }
+
+        &__h2{
+            &_text{
+                &-1{
+                    font-size: 30px;
+                }
+                &-2{
+                    font-size: 30px;
+                }
+                &-3{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:520px){
+    .header-container{
+        padding: 0 20px;
     }
 }
