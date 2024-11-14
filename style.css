@@ -19,6 +19,56 @@
   margin: 0 auto;
 }
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, img {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 .button {
   display: flex;
   width: 263px;
@@ -69,6 +119,11 @@
   line-height: 108%;
   text-transform: uppercase;
 }
+.header__logo_picture {
+  display: flex;
+  flex-direction: row;
+  gap: 1.73px;
+}
 .header__h2_text-1 {
   color: #313131;
   font-variant-numeric: lining-nums proportional-nums;
@@ -111,6 +166,7 @@
 .header__info_buttons {
   display: flex;
   gap: 16px;
+  padding-top: 16px;
 }
 .header__info_button-2 {
   background-color: transparent;
@@ -217,13 +273,13 @@
     width: 100%;
   }
   .header__h2_text-1 {
-    font-size: 30px;
+    font-size: 36px;
   }
   .header__h2_text-2 {
-    font-size: 30px;
+    font-size: 36px;
   }
   .header__h2_text-3 {
-    font-size: 30px;
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 520px) {
@@ -550,7 +606,7 @@
 }
 @media screen and (max-width: 425px) {
   .main {
-    padding: 48px 0 60px 0;
+    padding: 48px 0 35px 0;
   }
   .main-container {
     padding: 0 20px;
@@ -588,6 +644,7 @@
   .main__mobile_img {
     display: block;
     width: 100%;
+    margin-bottom: 19px;
   }
   .main__mobile_text {
     text-align: start;
@@ -632,6 +689,33 @@
 }
 .stages {
   padding: 85px 0 100px 0;
+}
+.stages-button {
+  border: none;
+  border-radius: 50%;
+}
+.stages-button circle {
+  transition: 0.5s;
+}
+.stages-button :hover circle {
+  fill: #FBCE51;
+}
+.stages-buttons {
+  display: none;
+  width: 178px;
+  height: 37px;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  justify-content: center;
+}
+.stages-buttons__nav {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
 }
 .stages__title {
   display: flex;
@@ -697,7 +781,7 @@
 }
 .stages-articles {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 .stages-articles__mobile {
@@ -705,6 +789,7 @@
   display: none;
   grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
   padding: 0 72px;
+  position: relative;
 }
 .stages-articles__mobile_1a2 {
   padding: 62px 20px 34px 20px;
@@ -728,6 +813,7 @@
   opacity: 0.8;
   background-color: #E9DED4;
   gap: 16px;
+  background-image: url(./image23.png);
 }
 .stages-article__div {
   width: 36px;
@@ -818,6 +904,19 @@
   background-color: #E9DED4;
   display: flex;
   gap: 16px;
+  position: relative;
+}
+.stages-article__mobile_img-7 {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  right: -30px;
+}
+.stages-article__mobile_img-1 {
+  display: none;
+  position: absolute;
+  top: -10px;
+  left: 100px;
 }
 
 @media screen and (max-width: 1323px) {
@@ -833,6 +932,17 @@
   .stages-articles__mobile {
     display: grid;
   }
+  .stages-article__mobile_7 {
+    grid-column: 1/3;
+    grid-row: 3/3;
+  }
+  .stages-article__mobile_text-7 {
+    max-width: 400px;
+    width: 100%;
+  }
+  .stages-article__mobile_img-7 {
+    display: block;
+  }
   .stages-article__img {
     display: none;
   }
@@ -846,11 +956,21 @@
     margin-bottom: 40px;
   }
 }
+@media screen and (max-width: 920px) {
+  .stages-article__mobile_text-7 {
+    max-width: 100%;
+  }
+  .stages-article__mobile_img-7 {
+    left: 100px;
+    bottom: -50px;
+  }
+}
 @media screen and (max-width: 833px) {
   .stages-articles__mobile {
     display: flex;
     overflow: scroll;
     flex: 335 0 0;
+    padding-top: 148px;
   }
   .stages-articles__mobile_1a2 {
     width: 335px;
@@ -885,13 +1005,26 @@
     height: 300px;
     flex: 0 0 335px;
   }
+  .stages-article__mobile_img-7 {
+    display: none;
+  }
+  .stages-article__mobile_img-1 {
+    display: block;
+  }
 }
 @media screen and (max-width: 750px) {
+  .stages {
+    padding: 85px 0 90px 0;
+  }
   .stages-container {
     padding: 0 40px;
   }
   .stages-articles__mobile {
     padding: 0 40px;
+    padding-top: 148px;
+  }
+  .stages-article__mobile_img-1 {
+    left: 70px;
   }
 }
 @media screen and (max-width: 520px) {
@@ -900,6 +1033,25 @@
   }
   .stages-articles__mobile {
     padding: 0 20px;
+    padding-top: 148px;
+  }
+  .stages-article__mobile_img-1 {
+    left: 40px;
+    width: 335px;
+    top: 20px;
+  }
+  .stages__title_mobile-h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .stages-buttons {
+    display: flex;
+  }
+}
+@media screen and (max-width: 360px) {
+  .stages__title_mobile-h2 {
+    font-size: 30px;
   }
 }
 .players {
@@ -1072,7 +1224,7 @@
 
 @media screen and (max-width: 1000px) {
   .players {
-    padding: 80px 0 70px 0;
+    padding: 80px 0 100px 0;
   }
   .players__title_h2 {
     font-size: 40px;
@@ -1088,7 +1240,7 @@
 }
 @media screen and (max-width: 700px) {
   .players {
-    padding: 30px 0 40px 0;
+    padding: 30px 0 100px 0;
   }
   .players-container {
     padding: 0 45px;
@@ -1100,6 +1252,12 @@
 @media screen and (max-width: 520px) {
   .players-container {
     padding: 0 20px;
+  }
+  .players__title {
+    margin-bottom: 40px;
+  }
+  .players__title_h2 {
+    font-size: 36px;
   }
   .players__title_buttons {
     display: none;

@@ -338,7 +338,7 @@
 
 @media screen and (max-width:425px){
     .main{
-        padding: 48px 0 60px 0;
+        padding: 48px 0 35px 0;
         &-container{
             padding: 0 20px;
         }
@@ -377,6 +377,7 @@
             &_img{
                 display: block;
                 width: 100%;
+                margin-bottom: 19px;
             }
             &_text{
                 text-align: start;

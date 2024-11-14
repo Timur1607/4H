@@ -23,6 +23,12 @@
             line-height: 108%;
             text-transform: uppercase;
         }
+
+        &_picture{
+            display: flex;
+            flex-direction: row;
+            gap: 1.73px;
+        }
     }
 
     &__h2{
@@ -72,6 +78,7 @@
         &_buttons{
             display: flex;
             gap: 16px;
+            padding-top: 16px;
         }
         &_button-2{
             background-color: transparent;
@@ -219,13 +226,13 @@
         &__h2{
             &_text{
                 &-1{
-                    font-size: 30px;
+                    font-size: 36px;
                 }
                 &-2{
-                    font-size: 30px;
+                    font-size: 36px;
                 }
                 &-3{
-                    font-size: 30px;
+                    font-size: 36px;
                 }
             }
         }
